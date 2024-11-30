@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMSTR Mining Project</title>
+    <!-- ›Ê‰ ùÂ« -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /*  ‰ŸÌ„«  ⁄„Ê„Ì */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(145deg, #1d2671, #c33764);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #f1f1f1;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+
+        .info-box {
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            font-size: 1.1em;
+        }
+
+        .reward-system {
+            margin-bottom: 20px;
+        }
+
+        .reward-system h3 {
+            text-align: center;
+            color: #ffcc00;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .reward-system ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.1em;
+        }
+
+        .reward-system li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .reward-system li i {
+            color: #ffcc00;
+            margin-right: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(145deg, #ff512f, #dd2476);
+            color: #fff;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(255, 82, 82, 0.5);
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #f1f1f1;
+            font-size: 1em;
+        }
+
+        footer span {
+            color: #ffcc00;
+        }
+
+        /* Õ«·  —Ì”Å«‰”ÌÊ */
+        @media (max-width: 500px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .info-box p {
+                font-size: 1em;
+            }
+
+            button {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>
+        <img src="https://s8.uupload.ir/files/d67519ef88e1068ac74cdf56af1c78c9_0fqq.jpg" alt="HMSTR Icon">
+        Welcome to HMSTR Mining Project
+    </h1>
+    <p>Your gateway to mining rewards!</p>
+</header>
+
+<div class="container">
+    <h2 class="section-title">Get Started</h2>
+
+    <!-- «ÿ·«⁄«  ŒÊ‘«„œêÊÌÌ -->
+    <div class="info-box">
+        <h3>Hello, <span id="telegram-username"></span>!</h3>
+        <p>Pay 400 HMSTR tokens to begin your mining journey.</p>
+    </div>
+
+    <!-- ”Ì” „ Å«œ«‘ -->
+    <div class="reward-system">
+        <h3>How It Works:</h3>
+        <ul>
+            <li><i class="fas fa-coins"></i> Pay 400 HMSTR to join.</li>
+            <li><i class="fas fa-share-alt"></i> Get your unique invite link.</li>
+            <li><i class="fas fa-user-plus"></i> Earn 1000 HMSTR for every 3 invites!</li>
+            <li><i class="fas fa-redo"></i> Invite more for unlimited rewards.</li>
+        </ul>
+    </div>
+
+    <!-- œò„Â Å—œ«Œ  -->
+    <button onclick="paymentProcess()">Pay 400 HMSTR Now</button>
+</div>
+
+<footer>
+    <p>Powered by <span>HMSTR Mining Project</span></p>
+</footer>
+
+<script>
+    // œ—Ì«›  ‰«„ ò«—»—Ì  ·ê—«„ «“ URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+    // ‰„«Ì‘ ‰«„ ò«—»—Ì  ·ê—«„
+    document.getElementById('telegram-username').innerText = username || "Guest";
+
+    // ›—«ŒÊ«‰Ì „ œ Å—œ«Œ 
+    function paymentProcess() {
+        fetch('http://localhost:5000/payment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: username,
+                payment_status: true
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+        })
+        .catch(error => {
+            alert('Payment failed');
+        });
+    }
+</script>
+
+</body>
+</html>
